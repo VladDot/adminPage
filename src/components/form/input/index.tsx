@@ -14,16 +14,17 @@ export const Input: React.FC<IInputProps> = ({
     onChange,
 }) => {
     return (
-        <>
-            <div className="form-example">
-                <label title={name}>{text} </label>
-                <input
-                    onChange={onChange}
-                    required
-                    type={type}
-                    name={name}
-                />
-            </div>
-        </>
+        <label
+            className="form-example"
+            title={name}
+        >
+            <span>{text}</span>
+            <input
+                onChange={onChange}
+                required
+                type={type}
+                name={name}
+            />
+        </label>
     );
 };
