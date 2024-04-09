@@ -1,0 +1,99 @@
+.nav {
+    max-width: 306px;
+    width: 100%;
+    height: 1198px;
+    border: 1px solid black;
+    margin-right: 71px;
+    display: flex;
+
+    justify-content: center;
+    .nav-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .nav_content-elements {
+            width: 231px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 64px 0;
+            .content_elements-logo {
+                margin-top: 36px;
+                display: flex;
+                align-items: end;
+                gap: 5px;
+                .element_logo-items {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+                h1 {
+                    font-family: Poppins;
+                    font-size: 26px;
+                    font-weight: 600;
+                    line-height: 39px;
+                    letter-spacing: 0.01em;
+                    text-align: left;
+                }
+                h4 {
+                    height: 15px;
+                    font-size: 10px;
+                    color: #9197b3;
+                    padding-bottom: 5px;
+                }
+            }
+            .content_elements-list {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 18px 0;
+
+                .elements_list-items {
+                    .list_items-content {
+                        color: #9197b3;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        align-items: center;
+                        gap: 14px;
+                        padding: 11px 8px 11px;
+                        border-radius: 8px;
+
+                        .items_content-title {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                    }
+                    .list_items-content:active {
+                        color: aqua;
+                        background-color: red;
+                    }
+                }
+            }
+        }
+        .nav_content-admin {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 76px;
+            img {
+                width: 42px;
+            }
+            h4 {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                letter-spacing: 0.01em;
+            }
+            h5 {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: 0.01em;
+
+                color: #9197b3;
+            }
+        }
+    }
+}

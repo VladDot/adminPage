@@ -1,30 +1,41 @@
 import { Link } from "react-router-dom";
-import { routes } from "../../constants/routes";
+import { mockNavbar } from "../../mocks/mock";
+import adminAvatar from "../../assets/img/adminAvatar.png";
+import "./style.scss";
+import { NavItem } from "./navItem";
+import { Logo } from "../logo";
 
 export const NavBar = () => {
     return (
         <>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to={routes.admin}>dashboard</Link>
-                    </li>
-                    <li>
-                        <Link to={routes.adminMenu.product}>product</Link>
-                    </li>
-                    <li>
-                        <Link to={routes.adminMenu.customers}>customers</Link>
-                    </li>
-                    <li>
-                        <Link to={routes.adminMenu.income}>income</Link>
-                    </li>
-                    <li>
-                        <Link to={routes.adminMenu.promote}>promote</Link>
-                    </li>
-                    <li>
-                        <Link to={routes.adminMenu.help}>help</Link>
-                    </li>
-                </ul>
+            <nav className="nav">
+                <div className="nav-content">
+                    <div className="nav_content-elements">
+                        <Logo />
+                        <ul className="content_elements-list ">
+                            {mockNavbar.map(
+                                ({ to, nameNavbar, id, icon }, idx) => (
+                                    <NavItem
+                                        key={`${id}_${idx}`}
+                                        to={to}
+                                        nameNavbar={nameNavbar}
+                                        Svg={icon}
+                                    />
+                                )
+                            )}
+                        </ul>
+                    </div>
+                    <div className="nav_content-admin">
+                        <img
+                            src={adminAvatar}
+                            alt=""
+                        />
+                        <span>
+                            <h4>Evano</h4>
+                            <h5>Project Manager</h5>
+                        </span>
+                    </div>
+                </div>
             </nav>
         </>
     );
