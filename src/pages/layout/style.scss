@@ -1,4 +1,19 @@
-.content {
+.layout {
     display: flex;
     gap: 10px;
+
+    .disable {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        opacity: 20%;
+        z-index: 500;
+    }
+    .content {
+    }
+}
+.disableScreen {
+    height: 100vh;
+    overflow-y: hidden;
 }

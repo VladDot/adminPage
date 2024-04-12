@@ -1,14 +1,33 @@
-import { Link } from "react-router-dom";
-import { mockNavbar } from "../../mocks/mock";
+import { useState } from "react";
 import adminAvatar from "../../assets/img/adminAvatar.png";
-import "./style.scss";
-import { NavItem } from "./navItem";
+import { mockNavbar } from "../../mocks/mock";
 import { Logo } from "../logo";
 
-export const NavBar = () => {
+import { NavItem } from "./navItem";
+import "./style.scss";
+
+interface INavBarProps {
+    setIsActiveNav: (value: boolean) => void;
+    isActiveNav: boolean;
+}
+
+export const NavBar: React.FC<INavBarProps> = ({
+    setIsActiveNav,
+    isActiveNav,
+}) => {
+    const handlerClick = () => {
+        setIsActiveNav(false);
+    };
     return (
         <>
-            <nav className="nav">
+            <nav className={isActiveNav ? "navPlanshet" : "closeNav"}>
+                <div
+                    className="close-container"
+                    onClick={handlerClick}
+                >
+                    <span className="close"></span>
+                </div>
+
                 <div className="nav-content">
                     <div className="nav_content-elements">
                         <Logo />
@@ -16,6 +35,7 @@ export const NavBar = () => {
                             {mockNavbar.map(
                                 ({ to, nameNavbar, id, icon }, idx) => (
                                     <NavItem
+                                        setIsActiveNav={setIsActiveNav}
                                         key={`${id}_${idx}`}
                                         to={to}
                                         nameNavbar={nameNavbar}

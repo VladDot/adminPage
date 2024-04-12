@@ -6,3 +6,4 @@ export { ReactComponent as CustomerIcon } from "./icons/customerIcon.svg";
 export { ReactComponent as DashboardIcon } from "./icons/dashboardIcon.svg";
 export { ReactComponent as Arrow } from "./icons/arrow.svg";
 export { ReactComponent as LogoIcon } from "./icons/logo.svg";
+export { ReactComponent as Burger } from "./icons/burger.svg";

@@ -18,7 +18,6 @@ export const Form = () => {
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
         event.preventDefault();
-        console.log(initialValue);
         navigate(routes.admin);
     };
 
